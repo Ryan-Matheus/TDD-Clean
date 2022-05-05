@@ -1,0 +1,12 @@
+//
+//  HttpsPostClient.swift
+//  Data
+//
+//  Created by user on 05/05/22.
+//
+
+import Foundation
+
+public protocol HttpPostClient {
+    func post(to url: URL, with data: Data?)
+}
