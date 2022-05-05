@@ -13,6 +13,7 @@
 		CEBB06EA28244EF300C17E6F /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06E928244EF300C17E6F /* RemoteAddAccountTests.swift */; };
 		CEBB06F32824515900C17E6F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06CB282449AC00C17E6F /* Domain.framework */; };
 		CEBB06F42824515900C17E6F /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06CB282449AC00C17E6F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEBB06F92824815400C17E6F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06F82824815400C17E6F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CEBB06DD28244EF300C17E6F /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB06E428244EF300C17E6F /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB06E928244EF300C17E6F /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
+		CEBB06F82824815400C17E6F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				CEBB06D428244D1A00C17E6F /* AddAccount.swift */,
 				CEBB06D628244EA900C17E6F /* AccountModel.swift */,
+				CEBB06F82824815400C17E6F /* Model.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBB06F92824815400C17E6F /* Model.swift in Sources */,
 				CEBB06D528244D1A00C17E6F /* AddAccount.swift in Sources */,
 				CEBB06D728244EA900C17E6F /* AccountModel.swift in Sources */,
 			);
