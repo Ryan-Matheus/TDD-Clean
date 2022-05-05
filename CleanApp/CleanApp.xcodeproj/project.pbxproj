@@ -6,17 +6,12 @@
 	objectVersion = 55;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		CEBB06C028242AF800C17E6F /* CleanApp.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBB06BF28242AF800C17E6F /* CleanApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		CEBB06BC28242AF800C17E6F /* CleanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBB06BF28242AF800C17E6F /* CleanApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CleanApp.h; sourceTree = "<group>"; };
+		CEBB06CB282449AC00C17E6F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CEBB06B928242AF800C17E6F /* Frameworks */ = {
+		CEBB06C8282449AC00C17E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,7 +24,7 @@
 		CEBB06B228242AF800C17E6F = {
 			isa = PBXGroup;
 			children = (
-				CEBB06BE28242AF800C17E6F /* CleanApp */,
+				CEBB06CC282449AC00C17E6F /* Domain */,
 				CEBB06BD28242AF800C17E6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -37,49 +32,47 @@
 		CEBB06BD28242AF800C17E6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEBB06BC28242AF800C17E6F /* CleanApp.framework */,
+				CEBB06CB282449AC00C17E6F /* Domain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEBB06BE28242AF800C17E6F /* CleanApp */ = {
+		CEBB06CC282449AC00C17E6F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				CEBB06BF28242AF800C17E6F /* CleanApp.h */,
 			);
-			path = CleanApp;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CEBB06B728242AF800C17E6F /* Headers */ = {
+		CEBB06C6282449AC00C17E6F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBB06C028242AF800C17E6F /* CleanApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CEBB06BB28242AF800C17E6F /* CleanApp */ = {
+		CEBB06CA282449AC00C17E6F /* Domain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEBB06C328242AF800C17E6F /* Build configuration list for PBXNativeTarget "CleanApp" */;
+			buildConfigurationList = CEBB06CF282449AC00C17E6F /* Build configuration list for PBXNativeTarget "Domain" */;
 			buildPhases = (
-				CEBB06B728242AF800C17E6F /* Headers */,
-				CEBB06B828242AF800C17E6F /* Sources */,
-				CEBB06B928242AF800C17E6F /* Frameworks */,
-				CEBB06BA28242AF800C17E6F /* Resources */,
+				CEBB06C6282449AC00C17E6F /* Headers */,
+				CEBB06C7282449AC00C17E6F /* Sources */,
+				CEBB06C8282449AC00C17E6F /* Frameworks */,
+				CEBB06C9282449AC00C17E6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CleanApp;
-			productName = CleanApp;
-			productReference = CEBB06BC28242AF800C17E6F /* CleanApp.framework */;
+			name = Domain;
+			productName = Domain;
+			productReference = CEBB06CB282449AC00C17E6F /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +84,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					CEBB06BB28242AF800C17E6F = {
+					CEBB06CA282449AC00C17E6F = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -109,13 +102,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEBB06BB28242AF800C17E6F /* CleanApp */,
+				CEBB06CA282449AC00C17E6F /* Domain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CEBB06BA28242AF800C17E6F /* Resources */ = {
+		CEBB06C9282449AC00C17E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +118,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CEBB06B828242AF800C17E6F /* Sources */ = {
+		CEBB06C7282449AC00C17E6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,10 +248,11 @@
 			};
 			name = Release;
 		};
-		CEBB06C428242AF800C17E6F /* Debug */ = {
+		CEBB06D0282449AC00C17E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -269,23 +263,25 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Ryan.CleanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Ryan.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CEBB06C528242AF800C17E6F /* Release */ = {
+		CEBB06D1282449AC00C17E6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -296,16 +292,17 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Ryan.CleanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Ryan.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -321,11 +318,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEBB06C328242AF800C17E6F /* Build configuration list for PBXNativeTarget "CleanApp" */ = {
+		CEBB06CF282449AC00C17E6F /* Build configuration list for PBXNativeTarget "Domain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEBB06C428242AF800C17E6F /* Debug */,
-				CEBB06C528242AF800C17E6F /* Release */,
+				CEBB06D0282449AC00C17E6F /* Debug */,
+				CEBB06D1282449AC00C17E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
