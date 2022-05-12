@@ -18,6 +18,7 @@
 		CEBB06FD2824838B00C17E6F /* HttpsPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06FC2824838B00C17E6F /* HttpsPostClient.swift */; };
 		CEBB07062825BE6100C17E6F /* DomainErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB07052825BE6100C17E6F /* DomainErrors.swift */; };
 		CEBB07082825C17500C17E6F /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB07072825C17500C17E6F /* HttpError.swift */; };
+		CEF8483C282D8FA200B45637 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8483B282D8FA200B45637 /* ExtensionHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CEBB06FC2824838B00C17E6F /* HttpsPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpsPostClient.swift; sourceTree = "<group>"; };
 		CEBB07052825BE6100C17E6F /* DomainErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainErrors.swift; sourceTree = "<group>"; };
 		CEBB07072825C17500C17E6F /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		CEF8483B282D8FA200B45637 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +118,9 @@
 		CEBB06CC282449AC00C17E6F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				CEBB07042825BE3D00C17E6F /* Errors */,
-				CEBB06FF2824852400C17E6F /* Models */,
 				CEBB06FE282484FB00C17E6F /* UseCases */,
+				CEBB06FF2824852400C17E6F /* Models */,
+				CEBB07042825BE3D00C17E6F /* Errors */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -126,6 +128,7 @@
 		CEBB06DE28244EF300C17E6F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CEF8483A282D8F8300B45637 /* Helpers */,
 				CEBB07002824853C00C17E6F /* UseCases */,
 				CEBB0702282485D200C17E6F /* Http */,
 			);
@@ -195,6 +198,14 @@
 				CEBB07052825BE6100C17E6F /* DomainErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		CEF8483A282D8F8300B45637 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8483B282D8FA200B45637 /* ExtensionHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBB06FD2824838B00C17E6F /* HttpsPostClient.swift in Sources */,
+				CEF8483C282D8FA200B45637 /* ExtensionHelpers.swift in Sources */,
 				CEBB07082825C17500C17E6F /* HttpError.swift in Sources */,
 				CEBB06FB2824832900C17E6F /* RemoteAddAccount.swift in Sources */,
 			);
