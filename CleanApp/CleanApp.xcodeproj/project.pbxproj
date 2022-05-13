@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE125C7F282EEEBF007BB100 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C7E282EEEBF007BB100 /* TestExtensions.swift */; };
+		CE125C81282EEF14007BB100 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C80282EEF14007BB100 /* TestFactories.swift */; };
+		CE125C84282EEFA0007BB100 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C83282EEFA0007BB100 /* HttpClientSpy.swift */; };
+		CE125C86282EEFF5007BB100 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C85282EEFF5007BB100 /* AccountModelFactory.swift */; };
 		CEBB06D528244D1A00C17E6F /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D428244D1A00C17E6F /* AddAccount.swift */; };
 		CEBB06D728244EA900C17E6F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D628244EA900C17E6F /* AccountModel.swift */; };
 		CEBB06E528244EF300C17E6F /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06DD28244EF300C17E6F /* Data.framework */; };
@@ -53,6 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE125C7E282EEEBF007BB100 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		CE125C80282EEF14007BB100 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		CE125C83282EEFA0007BB100 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		CE125C85282EEFF5007BB100 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		CEBB06CB282449AC00C17E6F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB06D428244D1A00C17E6F /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		CEBB06D628244EA900C17E6F /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -94,6 +102,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE125C7D282EEE82007BB100 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE125C7E282EEEBF007BB100 /* TestExtensions.swift */,
+				CE125C80282EEF14007BB100 /* TestFactories.swift */,
+				CE125C85282EEFF5007BB100 /* AccountModelFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE125C82282EEF60007BB100 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CE125C83282EEFA0007BB100 /* HttpClientSpy.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		CEBB06B228242AF800C17E6F = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +164,9 @@
 		CEBB06E828244EF300C17E6F /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE125C7D282EEE82007BB100 /* Helpers */,
 				CEBB0703282485E400C17E6F /* UseCases */,
+				CE125C82282EEF60007BB100 /* Http */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -378,6 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE125C81282EEF14007BB100 /* TestFactories.swift in Sources */,
+				CE125C84282EEFA0007BB100 /* HttpClientSpy.swift in Sources */,
+				CE125C7F282EEEBF007BB100 /* TestExtensions.swift in Sources */,
+				CE125C86282EEFF5007BB100 /* AccountModelFactory.swift in Sources */,
 				CEBB06EA28244EF300C17E6F /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
