@@ -24,10 +24,7 @@ class AlamoFireAdapter {
 class AlamoFireAdapterTests: XCTestCase {
     func test_post_should_make_request_with_valid_url_and_method() {
         let url = makeUrl()
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamoFireAdapter(session: session)
+        let sut = makeSut()
         sut.post(to: url, with: makeValidData())
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observerRequest { request in
@@ -39,18 +36,23 @@ class AlamoFireAdapterTests: XCTestCase {
     }
     
     func test_post_should_make_request_with_no_data() {
-        let url = makeUrl()
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamoFireAdapter(session: session)
-        sut.post(to: url, with: nil)
+        let sut = makeSut()
+        sut.post(to: makeUrl(), with: nil)
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observerRequest { request in
             XCTAssertNil(request.httpBodyStream)
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
+    }
+}
+
+extension AlamoFireAdapterTests {
+    func makeSut() -> AlamoFireAdapter {
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        return AlamoFireAdapter(session: session)
     }
 }
 
