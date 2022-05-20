@@ -10,7 +10,8 @@ class AlamoFireAdapter {
     }
     
     func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
-        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData { dataResponse in
+        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData
+        { dataResponse in
             switch dataResponse.result {
             case .failure: completion(.failure(.noConnectivity))
             case .success: break
@@ -63,14 +64,12 @@ extension AlamoFireAdapterTests {
     
     func testRequestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void) {
         let sut = makeSut()
-        sut.post(to: url, with: data) { _ in }
         let exp = expectation(description: "waiting")
-        UrlProtocolStub.observerRequest { request in
-            action(request)
-            exp.fulfill()
-        }
+        sut.post(to: url, with: data) { _ in exp.fulfill() }
+        var request: URLRequest?
+        UrlProtocolStub.observerRequest { request = $0 }
         wait(for: [exp], timeout: 1)
-
+        action(request!)
     }
 }
 
