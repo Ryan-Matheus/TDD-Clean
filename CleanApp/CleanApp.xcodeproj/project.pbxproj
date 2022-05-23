@@ -22,6 +22,7 @@
 		CE57233C28329EE700C62119 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C7E282EEEBF007BB100 /* TestExtensions.swift */; };
 		CE57233D28329EF200C62119 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C80282EEF14007BB100 /* TestFactories.swift */; };
 		CEB8BC82283C0B95000F96AD /* AlamoFireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */; };
+		CEB8BC86283C0F98000F96AD /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8BC85283C0F98000F96AD /* UrlProtocolStub.swift */; };
 		CEBB06D528244D1A00C17E6F /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D428244D1A00C17E6F /* AddAccount.swift */; };
 		CEBB06D728244EA900C17E6F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D628244EA900C17E6F /* AccountModel.swift */; };
 		CEBB06E528244EF300C17E6F /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06DD28244EF300C17E6F /* Data.framework */; };
@@ -115,6 +116,7 @@
 		CE57232E283294C700C62119 /* AlamoFireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireAdapterTests.swift; sourceTree = "<group>"; };
 		CE968CE728340F73005DD7FE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireAdapter.swift; sourceTree = "<group>"; };
+		CEB8BC85283C0F98000F96AD /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		CEBB06CB282449AC00C17E6F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB06D428244D1A00C17E6F /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		CEBB06D628244EA900C17E6F /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -226,7 +228,7 @@
 		CE57232D283294C700C62119 /* infraTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE57232E283294C700C62119 /* AlamoFireAdapterTests.swift */,
+				CEB8BC84283C0D2D000F96AD /* Http */,
 			);
 			path = infraTests;
 			sourceTree = "<group>";
@@ -235,6 +237,15 @@
 			isa = PBXGroup;
 			children = (
 				CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		CEB8BC84283C0D2D000F96AD /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CE57232E283294C700C62119 /* AlamoFireAdapterTests.swift */,
+				CEB8BC85283C0F98000F96AD /* UrlProtocolStub.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -727,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE57233D28329EF200C62119 /* TestFactories.swift in Sources */,
+				CEB8BC86283C0F98000F96AD /* UrlProtocolStub.swift in Sources */,
 				CE57232F283294C700C62119 /* AlamoFireAdapterTests.swift in Sources */,
 				CE57233C28329EE700C62119 /* TestExtensions.swift in Sources */,
 			);
