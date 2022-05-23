@@ -1,6 +1,7 @@
 import XCTest
 import Alamofire
 import Data
+import infra
 
 class AlamoFireAdapter: HttpPostClient {
     private let session: Session

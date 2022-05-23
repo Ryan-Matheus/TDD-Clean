@@ -21,6 +21,7 @@
 		CE5723382832975A00C62119 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06DD28244EF300C17E6F /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE57233C28329EE700C62119 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C7E282EEEBF007BB100 /* TestExtensions.swift */; };
 		CE57233D28329EF200C62119 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE125C80282EEF14007BB100 /* TestFactories.swift */; };
+		CEB8BC82283C0B95000F96AD /* AlamoFireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */; };
 		CEBB06D528244D1A00C17E6F /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D428244D1A00C17E6F /* AddAccount.swift */; };
 		CEBB06D728244EA900C17E6F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB06D628244EA900C17E6F /* AccountModel.swift */; };
 		CEBB06E528244EF300C17E6F /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBB06DD28244EF300C17E6F /* Data.framework */; };
@@ -113,6 +114,7 @@
 		CE572329283294C700C62119 /* infraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE57232E283294C700C62119 /* AlamoFireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireAdapterTests.swift; sourceTree = "<group>"; };
 		CE968CE728340F73005DD7FE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireAdapter.swift; sourceTree = "<group>"; };
 		CEBB06CB282449AC00C17E6F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB06D428244D1A00C17E6F /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		CEBB06D628244EA900C17E6F /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		CE572323283294C600C62119 /* infra */ = {
 			isa = PBXGroup;
 			children = (
+				CEB8BC83283C0C2F000F96AD /* Http */,
 			);
 			path = infra;
 			sourceTree = "<group>";
@@ -226,6 +229,14 @@
 				CE57232E283294C700C62119 /* AlamoFireAdapterTests.swift */,
 			);
 			path = infraTests;
+			sourceTree = "<group>";
+		};
+		CEB8BC83283C0C2F000F96AD /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8BC81283C0B94000F96AD /* AlamoFireAdapter.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 		CEBB06B228242AF800C17E6F = {
@@ -494,6 +505,7 @@
 				TargetAttributes = {
 					CE572321283294C600C62119 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1340;
 					};
 					CE572328283294C700C62119 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -706,6 +718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB8BC82283C0B95000F96AD /* AlamoFireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 882EE6A8653F3941EF740595 /* Pods-infra.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -805,6 +819,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -813,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D19D372C379CA3663C23745D /* Pods-infra.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -843,6 +859,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30A978D644F177134A82EFB2 /* Pods-infra-infraTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -860,6 +877,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A46EF7C9B364DA436DC33249 /* Pods-infra-infraTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
